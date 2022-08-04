@@ -28,7 +28,7 @@ class PDFDocument {
         text += this.nbPages + " pages<br/>";
         text += this.priceTotal.toFixed(2) + "€<br/>";
         text += "Impression: " + (this.colorValue === 'black' ? 'Noir' : 'Couleur') + "<br/>";
-        text += '<table class="table">';
+        text += '<div class="table-responsive"><table class="table">';
         text += '<thead><tr>';
         text += '<th>#</th>';
         text += '<th>Largeur</th>';
@@ -40,7 +40,7 @@ class PDFDocument {
         for (let index = 0; index < this.pdfPages.length; index++) {
             text += '<tr><td>' + (index + 1) + '</td>' + this.pdfPages[index].toString() + '</tr>';
         }
-        text += '</tbody></table><br/>';
+        text += '</tbody></table></div><br/>';
         return text;
     }
 
