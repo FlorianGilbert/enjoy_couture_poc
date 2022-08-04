@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Reader</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/pdf.js/build/pdf.js" type="application/javascript"></script>
+    <script src="model.js" type="application/javascript"></script>
+    <script src="main.js" type="application/javascript"></script>
+</head>
+<body>
+<div class="row mt-5">
+    <div class="col-4 offset-4">
+        <form action="">
+            <div class="mb-3">
+                <label for="form-file" class="form-label">PDF</label>
+                <input class="form-control" id="form-file" type="file" accept="application/pdf,.pdf" required value="Test">
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="color" id="black" value="black" checked>
+                <label class="form-check-label" for="black">
+                    Noir
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="color" id="color" value="color">
+                <label class="form-check-label" for="color">
+                    Couleur
+                </label>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Envoyer"/>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4 offset-4" id="file-data">
+    </div>
+</div>
+</body>
+</html>
